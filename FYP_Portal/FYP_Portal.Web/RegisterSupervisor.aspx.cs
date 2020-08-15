@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -44,7 +45,7 @@ namespace FYP_Portal.Web
                     // string file = "~/Uploads/" + str.ToString();                
                     string file = str.ToString();
 
-                    con = new SqlConnection(@"Data Source=DESKTOP-G46F2K8\SQLEXPRESS;Initial Catalog=FYP PORTAL;Integrated Security=True");
+                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                     con.Open();
                     //cmd = new SqlCommand("INSERT INTO RegisterSupervisor (Username, Password, Role, Institute) VALUES (@Username, @Password, @Role, @Institute)", con);
                     cmd = new SqlCommand("INSERT INTO RegisterSupervisor (Username, Name, Password, UniversityEmail, Email, Phone, Department, Designation, ProfileImage, Institute) VALUES (@Username, @Name, @Password, @UniversityEmail, @Email, @Phone, @Department, @Designation, @ProfileImage, @Institute)", con);
@@ -76,7 +77,7 @@ namespace FYP_Portal.Web
                 {
                     string file = MyGuid.GetRandomPasswordForUpload() + "icon.png";
                     File.Copy(Server.MapPath("~/StudentImages/icon.png"), Server.MapPath("~/SupervisorImages/" + file));
-                    con = new SqlConnection(@"Data Source=DESKTOP-G46F2K8\SQLEXPRESS;Initial Catalog=FYP PORTAL;Integrated Security=True");
+                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                     con.Open();
                     //cmd = new SqlCommand("INSERT INTO RegisterSupervisor (Username, Password, Role, Institute) VALUES (@Username, @Password, @Role, @Institute)", con);
                     cmd = new SqlCommand("INSERT INTO RegisterSupervisor (Username, Name, Password, UniversityEmail, Email, Phone, Department, Designation, ProfileImage, Institute) VALUES (@Username, @Name, @Password, @UniversityEmail, @Email, @Phone, @Department, @Designation, @ProfileImage, @Institute)", con);
@@ -110,7 +111,7 @@ namespace FYP_Portal.Web
 
         public bool IsExist(string email)
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-G46F2K8\SQLEXPRESS;Initial Catalog=FYP PORTAL;Integrated Security=True");
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
             //cmd = new SqlCommand("INSERT INTO RegisterStudent (Enrollment, Password, Role, Institute) VALUES (@Enrollment, @Password, @Role, @Institute)", con);
             cmd = new SqlCommand("select * from RegisterSupervisor where Email=@Email", con);

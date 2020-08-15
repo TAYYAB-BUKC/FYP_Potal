@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace FYP_Portal.Web
 {
-    public partial class StudentLogin : System.Web.UI.Page
+    public partial class SupervisorLogin : Page
     {
         SqlCommand cmd;
         SqlConnection con;
@@ -21,48 +17,47 @@ namespace FYP_Portal.Web
             Page.ClientScript.RegisterOnSubmitStatement(this.GetType(), "val", "validateAndHighlight();");
         }
 
-        protected void BtnStdLogin_Click1(object sender, EventArgs e)
+        protected void BtnSvLogin_Click(object sender, EventArgs e)
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
-            cmd = new SqlCommand("select * from RegisterStudent where Enrollment = @Enrollment and Password = @Password and Institute = @Institute", con);
+            cmd = new SqlCommand("select * from RegisterSupervisor where Username = @Username and Password = @Password and Institute = @Institute", con);
 
-            cmd.Parameters.AddWithValue("@Enrollment", SqlDbType.VarChar).Value = enroll.Text.ToString();
+            cmd.Parameters.AddWithValue("@Username", SqlDbType.VarChar).Value = uname.Text.ToString();
             cmd.Parameters.AddWithValue("@Password", SqlDbType.VarChar).Value = pwd.Text.ToString();
             cmd.Parameters.AddWithValue("@Institute", SqlDbType.VarChar).Value = inst.Text.ToString();
 
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
-                string enroll = String.Empty;
+                string email = String.Empty;
                 string image = String.Empty;
                 string name = String.Empty;
 
                 while (reader.Read())
                 {
-                    enroll = reader.GetString(0);
-                    image = reader.GetString(11);
+                    email = reader.GetString(3);
+                    image = reader.GetString(9);
                     name = reader.GetString(1);
                 }
+
                 con.Close();
-                Session["name"] = name;
-                Session["image"] = "~/StudentImages/" + image;
-                Session["enroll"] = enroll;
-                Response.Redirect("StudentDashboard.aspx");
+                Session["supervisorname"] = name;
+                Session["supervisorimage"] = "~/SupervisorImages/" + image;
+                Session["supervisoremail"] = email;
+                Response.Redirect("SupervisorDashboard.aspx");
             }
 
             else
             {
-                con.Close();
                 string message = "Error!";
                 string message1 = "Invalid credentials provided.";
                 string message2 = "error";
                 string script = "swal('" + message + "','" + message1 + "','" + message2 + "');";
                 ClientScript.RegisterStartupScript(this.GetType(), "Success Message", script, true);
-
+                con.Close();
             }
 
         }
     }
 }
-

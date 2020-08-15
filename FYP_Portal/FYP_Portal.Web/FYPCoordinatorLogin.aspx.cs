@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace FYP_Portal.Web
 {
-    public partial class StudentLogin : System.Web.UI.Page
+    public partial class FYPCoordinatorLogin : Page
     {
         SqlCommand cmd;
         SqlConnection con;
@@ -21,39 +18,37 @@ namespace FYP_Portal.Web
             Page.ClientScript.RegisterOnSubmitStatement(this.GetType(), "val", "validateAndHighlight();");
         }
 
-        protected void BtnStdLogin_Click1(object sender, EventArgs e)
+        protected void BtnFypLogin_Click(object sender, EventArgs e)
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
-            cmd = new SqlCommand("select * from RegisterStudent where Enrollment = @Enrollment and Password = @Password and Institute = @Institute", con);
+            cmd = new SqlCommand("select * from FYPCoordinatorLogin where PersonalEmail = @PersonalEmail and Password = @Password", con);
 
-            cmd.Parameters.AddWithValue("@Enrollment", SqlDbType.VarChar).Value = enroll.Text.ToString();
+            cmd.Parameters.AddWithValue("@PersonalEmail", SqlDbType.VarChar).Value = pemail.Text.ToString();
             cmd.Parameters.AddWithValue("@Password", SqlDbType.VarChar).Value = pwd.Text.ToString();
-            cmd.Parameters.AddWithValue("@Institute", SqlDbType.VarChar).Value = inst.Text.ToString();
 
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
-                string enroll = String.Empty;
+                string email = String.Empty;
                 string image = String.Empty;
                 string name = String.Empty;
 
                 while (reader.Read())
                 {
-                    enroll = reader.GetString(0);
-                    image = reader.GetString(11);
-                    name = reader.GetString(1);
+                    email = reader.GetString(0);
+                    image = reader.GetString(7);
+                    name = reader.GetString(2);
                 }
                 con.Close();
-                Session["name"] = name;
-                Session["image"] = "~/StudentImages/" + image;
-                Session["enroll"] = enroll;
-                Response.Redirect("StudentDashboard.aspx");
+                Session["fypname"] = name;
+                Session["fypimage"] = "~/FYPCoordinatorImages/" + image;
+                Session["fypemail"] = email;
+                Response.Redirect("FYPCoordinatorDashboard.aspx");
             }
 
             else
             {
-                con.Close();
                 string message = "Error!";
                 string message1 = "Invalid credentials provided.";
                 string message2 = "error";
@@ -63,6 +58,6 @@ namespace FYP_Portal.Web
             }
 
         }
+
     }
 }
-

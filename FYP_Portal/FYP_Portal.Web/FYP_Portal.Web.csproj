@@ -149,9 +149,11 @@
     <Content Include="css\timecounter.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FYPCoordinatorDashboard.aspx" />
     <Content Include="FYPCoordinatorImages\dvcnpkyminaeteacher_icon2.png" />
     <Content Include="FYPCoordinatorImages\icon.png" />
     <Content Include="FYPCoordinatorImages\waupbhteacher_icon4.jpg" />
+    <Content Include="FYPCoordinatorLogin.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -244,12 +246,14 @@
     <Content Include="StudentImages\icon.png" />
     <Content Include="StudentImages\xtqscmpmjiyegirl_icon.png" />
     <Content Include="StudentLogin.aspx" />
+    <Content Include="SupervisorDashboard.aspx" />
     <Content Include="SupervisorImages\bnvdiyahmbrjteacher_icon3.jpg" />
     <Content Include="SupervisorImages\cdugtwmieswypmjiyegirl_icon.png" />
     <Content Include="SupervisorImages\hlimkateacher_icon.png" />
     <Content Include="SupervisorImages\iraoumgirl_icon2.png" />
     <Content Include="SupervisorImages\rxvydiicon.png" />
     <Content Include="SupervisorImages\yminaeteacher_icon2.png" />
+    <Content Include="SupervisorLogin.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -257,6 +261,20 @@
     <Compile Include="App_Data\MyGuid.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="FYPCoordinatorDashboard.aspx.cs">
+      <DependentUpon>FYPCoordinatorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FYPCoordinatorDashboard.aspx.designer.cs">
+      <DependentUpon>FYPCoordinatorDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FYPCoordinatorLogin.aspx.cs">
+      <DependentUpon>FYPCoordinatorLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FYPCoordinatorLogin.aspx.designer.cs">
+      <DependentUpon>FYPCoordinatorLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -288,6 +306,20 @@
     </Compile>
     <Compile Include="StudentLogin.aspx.designer.cs">
       <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorDashboard.aspx.cs">
+      <DependentUpon>SupervisorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorDashboard.aspx.designer.cs">
+      <DependentUpon>SupervisorDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorLogin.aspx.cs">
+      <DependentUpon>SupervisorLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorLogin.aspx.designer.cs">
+      <DependentUpon>SupervisorLogin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
