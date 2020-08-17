@@ -150,10 +150,12 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FYPCoordinatorDashboard.aspx" />
+    <Content Include="FYPCoordinatorEditProfile.aspx" />
     <Content Include="FYPCoordinatorImages\dvcnpkyminaeteacher_icon2.png" />
     <Content Include="FYPCoordinatorImages\icon.png" />
     <Content Include="FYPCoordinatorImages\waupbhteacher_icon4.jpg" />
     <Content Include="FYPCoordinatorLogin.aspx" />
+    <Content Include="FYPCoordinatorProfileInfo.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -272,12 +274,26 @@
     <Compile Include="FYPCoordinatorDashboard.aspx.designer.cs">
       <DependentUpon>FYPCoordinatorDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FYPCoordinatorEditProfile.aspx.cs">
+      <DependentUpon>FYPCoordinatorEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FYPCoordinatorEditProfile.aspx.designer.cs">
+      <DependentUpon>FYPCoordinatorEditProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FYPCoordinatorLogin.aspx.cs">
       <DependentUpon>FYPCoordinatorLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FYPCoordinatorLogin.aspx.designer.cs">
       <DependentUpon>FYPCoordinatorLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FYPCoordinatorProfileInfo.aspx.cs">
+      <DependentUpon>FYPCoordinatorProfileInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FYPCoordinatorProfileInfo.aspx.designer.cs">
+      <DependentUpon>FYPCoordinatorProfileInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
