@@ -108,6 +108,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -148,7 +150,10 @@
     <Content Include="css\style.css" />
     <Content Include="css\timecounter.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\Flaticon.svg" />
+    <Content Include="fonts\fontawesome-webfont3e6e.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\slick.svg" />
     <Content Include="FYPCoordinatorDashboard.aspx" />
     <Content Include="FYPCoordinatorEditProfile.aspx" />
     <Content Include="FYPCoordinatorImages\dvcnpkyminaeteacher_icon2.png" />
@@ -165,7 +170,22 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\Flaticon.eot" />
+    <Content Include="fonts\Flaticon.ttf" />
+    <Content Include="fonts\Flaticon.woff" />
+    <Content Include="fonts\Flaticon.woff2" />
+    <Content Include="fonts\Flaticond41d.eot" />
+    <Content Include="fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="fonts\slick.eot" />
+    <Content Include="fonts\slick.ttf" />
+    <Content Include="fonts\slick.woff" />
+    <Content Include="fonts\slickd41d.eot" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Home.aspx" />
     <Content Include="images\about\buic.jpg" />
     <Content Include="images\about\bukc.jpg" />
     <Content Include="images\about\bulc.jpg" />
@@ -260,13 +280,29 @@
     <Content Include="SupervisorImages\yminaeteacher_icon2.png" />
     <Content Include="SupervisorLogin.aspx" />
     <Content Include="SupervisorProfileInfo.aspx" />
+    <Content Include="ViewStudentTimetable.aspx" />
+    <Content Include="ViewSupervisorTimetable.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\MyGuid.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FYPCoordinatorDashboard.aspx.cs">
       <DependentUpon>FYPCoordinatorDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,6 +333,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterStudent.aspx.cs">
@@ -368,6 +411,20 @@
     </Compile>
     <Compile Include="SupervisorProfileInfo.aspx.designer.cs">
       <DependentUpon>SupervisorProfileInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudentTimetable.aspx.cs">
+      <DependentUpon>ViewStudentTimetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStudentTimetable.aspx.designer.cs">
+      <DependentUpon>ViewStudentTimetable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSupervisorTimetable.aspx.cs">
+      <DependentUpon>ViewSupervisorTimetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSupervisorTimetable.aspx.designer.cs">
+      <DependentUpon>ViewSupervisorTimetable.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
