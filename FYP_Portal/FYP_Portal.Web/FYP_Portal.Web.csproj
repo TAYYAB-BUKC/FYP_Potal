@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="Attendance.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -149,6 +150,7 @@
     <Content Include="css\slider.css" />
     <Content Include="css\style.css" />
     <Content Include="css\timecounter.css" />
+    <Content Include="DetailedStudentAttendanceSummary.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\Flaticon.svg" />
     <Content Include="fonts\fontawesome-webfont3e6e.svg" />
@@ -185,6 +187,7 @@
     <Content Include="fonts\slick.woff" />
     <Content Include="fonts\slickd41d.eot" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="GroupsAttendanceSummary.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\about\buic.jpg" />
     <Content Include="images\about\bukc.jpg" />
@@ -233,6 +236,7 @@
     <Content Include="js\timepicker.js" />
     <Content Include="js\WebFormsJs.js" />
     <Content Include="js\wow.min.js" />
+    <Content Include="MarkAttendance.aspx" />
     <Content Include="Notifications.aspx" />
     <Content Include="RegisterStudent.aspx" />
     <Content Include="RegisterSupervisor.aspx" />
@@ -264,6 +268,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="StudentAttendanceSummary.aspx" />
     <Content Include="StudentDashboard.aspx" />
     <Content Include="StudentEditProfile.aspx" />
     <Content Include="StudentImages\fweqrsboy_icon.png" />
@@ -281,6 +286,7 @@
     <Content Include="SupervisorImages\yminaeteacher_icon2.png" />
     <Content Include="SupervisorLogin.aspx" />
     <Content Include="SupervisorProfileInfo.aspx" />
+    <Content Include="ViewAttendance.aspx" />
     <Content Include="ViewStudentNotifications.aspx" />
     <Content Include="ViewStudentTimetable.aspx" />
     <Content Include="ViewSupervisorNotifications.aspx" />
@@ -296,15 +302,30 @@
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\Cryptography.cs" />
     <Compile Include="App_Data\MyGuid.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedStudentAttendanceSummary.aspx.cs">
+      <DependentUpon>DetailedStudentAttendanceSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailedStudentAttendanceSummary.aspx.designer.cs">
+      <DependentUpon>DetailedStudentAttendanceSummary.aspx</DependentUpon>
     </Compile>
     <Compile Include="FYPCoordinatorDashboard.aspx.cs">
       <DependentUpon>FYPCoordinatorDashboard.aspx</DependentUpon>
@@ -337,12 +358,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GroupsAttendanceSummary.aspx.cs">
+      <DependentUpon>GroupsAttendanceSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GroupsAttendanceSummary.aspx.designer.cs">
+      <DependentUpon>GroupsAttendanceSummary.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarkAttendance.aspx.cs">
+      <DependentUpon>MarkAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MarkAttendance.aspx.designer.cs">
+      <DependentUpon>MarkAttendance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Notifications.aspx.cs">
       <DependentUpon>Notifications.aspx</DependentUpon>
@@ -365,6 +400,13 @@
     </Compile>
     <Compile Include="RegisterSupervisor.aspx.designer.cs">
       <DependentUpon>RegisterSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAttendanceSummary.aspx.cs">
+      <DependentUpon>StudentAttendanceSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentAttendanceSummary.aspx.designer.cs">
+      <DependentUpon>StudentAttendanceSummary.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentDashboard.aspx.cs">
       <DependentUpon>StudentDashboard.aspx</DependentUpon>
@@ -421,6 +463,13 @@
     </Compile>
     <Compile Include="SupervisorProfileInfo.aspx.designer.cs">
       <DependentUpon>SupervisorProfileInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAttendance.aspx.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAttendance.aspx.designer.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewStudentNotifications.aspx.cs">
       <DependentUpon>ViewStudentNotifications.aspx</DependentUpon>
