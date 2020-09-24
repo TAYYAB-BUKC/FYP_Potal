@@ -109,7 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="AddCLO.aspx" />
+    <Content Include="AddPLO.aspx" />
     <Content Include="Attendance.aspx" />
+    <Content Include="CLOPLOMapping.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -151,7 +154,12 @@
     <Content Include="css\style.css" />
     <Content Include="css\timecounter.css" />
     <Content Include="DetailedStudentAttendanceSummary.aspx" />
+    <Content Include="Documentation.aspx" />
+    <Content Include="Documents.aspx" />
+    <Content Include="EIMapping.aspx" />
+    <Content Include="EvaluationInstruments.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Files.aspx" />
     <Content Include="fonts\Flaticon.svg" />
     <Content Include="fonts\fontawesome-webfont3e6e.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -238,6 +246,7 @@
     <Content Include="js\wow.min.js" />
     <Content Include="MarkAttendance.aspx" />
     <Content Include="Notifications.aspx" />
+    <Content Include="PLOMapping.aspx" />
     <Content Include="RegisterStudent.aspx" />
     <Content Include="RegisterSupervisor.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -276,6 +285,7 @@
     <Content Include="StudentImages\xtqscmpmjiyegirl_icon.png" />
     <Content Include="StudentLogin.aspx" />
     <Content Include="StudentProfileInfo.aspx" />
+    <Content Include="SubmitDocument.aspx" />
     <Content Include="SupervisorDashboard.aspx" />
     <Content Include="SupervisorEditProfile.aspx" />
     <Content Include="SupervisorImages\bnvdiyahmbrjteacher_icon3.jpg" />
@@ -286,6 +296,8 @@
     <Content Include="SupervisorImages\yminaeteacher_icon2.png" />
     <Content Include="SupervisorLogin.aspx" />
     <Content Include="SupervisorProfileInfo.aspx" />
+    <Content Include="UpDelCLO.aspx" />
+    <Content Include="UpDelPLO.aspx" />
     <Content Include="ViewAttendance.aspx" />
     <Content Include="ViewStudentNotifications.aspx" />
     <Content Include="ViewStudentTimetable.aspx" />
@@ -302,6 +314,20 @@
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddCLO.aspx.cs">
+      <DependentUpon>AddCLO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCLO.aspx.designer.cs">
+      <DependentUpon>AddCLO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPLO.aspx.cs">
+      <DependentUpon>AddPLO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPLO.aspx.designer.cs">
+      <DependentUpon>AddPLO.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\Cryptography.cs" />
     <Compile Include="App_Data\MyGuid.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -312,6 +338,13 @@
     </Compile>
     <Compile Include="Attendance.aspx.designer.cs">
       <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CLOPLOMapping.aspx.cs">
+      <DependentUpon>CLOPLOMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CLOPLOMapping.aspx.designer.cs">
+      <DependentUpon>CLOPLOMapping.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -326,6 +359,41 @@
     </Compile>
     <Compile Include="DetailedStudentAttendanceSummary.aspx.designer.cs">
       <DependentUpon>DetailedStudentAttendanceSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentation.aspx.cs">
+      <DependentUpon>Documentation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentation.aspx.designer.cs">
+      <DependentUpon>Documentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents.aspx.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents.aspx.designer.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EIMapping.aspx.cs">
+      <DependentUpon>EIMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EIMapping.aspx.designer.cs">
+      <DependentUpon>EIMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluationInstruments.aspx.cs">
+      <DependentUpon>EvaluationInstruments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvaluationInstruments.aspx.designer.cs">
+      <DependentUpon>EvaluationInstruments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Files.aspx.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Files.aspx.designer.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
     </Compile>
     <Compile Include="FYPCoordinatorDashboard.aspx.cs">
       <DependentUpon>FYPCoordinatorDashboard.aspx</DependentUpon>
@@ -386,6 +454,13 @@
     <Compile Include="Notifications.aspx.designer.cs">
       <DependentUpon>Notifications.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PLOMapping.aspx.cs">
+      <DependentUpon>PLOMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PLOMapping.aspx.designer.cs">
+      <DependentUpon>PLOMapping.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterStudent.aspx.cs">
       <DependentUpon>RegisterStudent.aspx</DependentUpon>
@@ -436,6 +511,13 @@
     <Compile Include="StudentProfileInfo.aspx.designer.cs">
       <DependentUpon>StudentProfileInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SubmitDocument.aspx.cs">
+      <DependentUpon>SubmitDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmitDocument.aspx.designer.cs">
+      <DependentUpon>SubmitDocument.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SupervisorDashboard.aspx.cs">
       <DependentUpon>SupervisorDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -463,6 +545,20 @@
     </Compile>
     <Compile Include="SupervisorProfileInfo.aspx.designer.cs">
       <DependentUpon>SupervisorProfileInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpDelCLO.aspx.cs">
+      <DependentUpon>UpDelCLO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpDelCLO.aspx.designer.cs">
+      <DependentUpon>UpDelCLO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpDelPLO.aspx.cs">
+      <DependentUpon>UpDelPLO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpDelPLO.aspx.designer.cs">
+      <DependentUpon>UpDelPLO.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewAttendance.aspx.cs">
       <DependentUpon>ViewAttendance.aspx</DependentUpon>
