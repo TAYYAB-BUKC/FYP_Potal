@@ -54,6 +54,15 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.3450.0.40, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.18.3.0.40\lib\net45\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.3450.0.40, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.3.0.40\lib\net45\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=18.3450.0.40, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.AspNet.18.3.0.40\lib\net45\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -195,6 +204,7 @@
     <Content Include="fonts\slick.woff" />
     <Content Include="fonts\slickd41d.eot" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Groups.aspx" />
     <Content Include="GroupsAttendanceSummary.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\about\buic.jpg" />
@@ -244,11 +254,17 @@
     <Content Include="js\timepicker.js" />
     <Content Include="js\WebFormsJs.js" />
     <Content Include="js\wow.min.js" />
+    <Content Include="LogBookEvaluation.aspx" />
+    <Content Include="LogBookSheet.aspx" />
     <Content Include="MarkAttendance.aspx" />
     <Content Include="Notifications.aspx" />
     <Content Include="PLOMapping.aspx" />
+    <Content Include="PresentationEvaluation.aspx" />
+    <Content Include="PresentationSheet.aspx" />
     <Content Include="RegisterStudent.aspx" />
     <Content Include="RegisterSupervisor.aspx" />
+    <Content Include="ReportEvaluation.aspx" />
+    <Content Include="ReportSheet.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -285,6 +301,7 @@
     <Content Include="StudentImages\xtqscmpmjiyegirl_icon.png" />
     <Content Include="StudentLogin.aspx" />
     <Content Include="StudentProfileInfo.aspx" />
+    <Content Include="StudentTimetable.aspx" />
     <Content Include="SubmitDocument.aspx" />
     <Content Include="SupervisorDashboard.aspx" />
     <Content Include="SupervisorEditProfile.aspx" />
@@ -296,13 +313,16 @@
     <Content Include="SupervisorImages\yminaeteacher_icon2.png" />
     <Content Include="SupervisorLogin.aspx" />
     <Content Include="SupervisorProfileInfo.aspx" />
+    <Content Include="SupervisorTimetable.aspx" />
     <Content Include="UpDelCLO.aspx" />
     <Content Include="UpDelPLO.aspx" />
     <Content Include="ViewAttendance.aspx" />
+    <Content Include="ViewGroups.aspx" />
     <Content Include="ViewStudentNotifications.aspx" />
     <Content Include="ViewStudentTimetable.aspx" />
     <Content Include="ViewSupervisorNotifications.aspx" />
     <Content Include="ViewSupervisorTimetable.aspx" />
+    <Content Include="ViewTimetables.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -426,6 +446,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Groups.aspx.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Groups.aspx.designer.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GroupsAttendanceSummary.aspx.cs">
       <DependentUpon>GroupsAttendanceSummary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -439,6 +466,20 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogBookEvaluation.aspx.cs">
+      <DependentUpon>LogBookEvaluation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogBookEvaluation.aspx.designer.cs">
+      <DependentUpon>LogBookEvaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogBookSheet.aspx.cs">
+      <DependentUpon>LogBookSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogBookSheet.aspx.designer.cs">
+      <DependentUpon>LogBookSheet.aspx</DependentUpon>
     </Compile>
     <Compile Include="MarkAttendance.aspx.cs">
       <DependentUpon>MarkAttendance.aspx</DependentUpon>
@@ -461,6 +502,20 @@
     <Compile Include="PLOMapping.aspx.designer.cs">
       <DependentUpon>PLOMapping.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PresentationEvaluation.aspx.cs">
+      <DependentUpon>PresentationEvaluation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationEvaluation.aspx.designer.cs">
+      <DependentUpon>PresentationEvaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationSheet.aspx.cs">
+      <DependentUpon>PresentationSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationSheet.aspx.designer.cs">
+      <DependentUpon>PresentationSheet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterStudent.aspx.cs">
       <DependentUpon>RegisterStudent.aspx</DependentUpon>
@@ -475,6 +530,20 @@
     </Compile>
     <Compile Include="RegisterSupervisor.aspx.designer.cs">
       <DependentUpon>RegisterSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportEvaluation.aspx.cs">
+      <DependentUpon>ReportEvaluation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportEvaluation.aspx.designer.cs">
+      <DependentUpon>ReportEvaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSheet.aspx.cs">
+      <DependentUpon>ReportSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportSheet.aspx.designer.cs">
+      <DependentUpon>ReportSheet.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentAttendanceSummary.aspx.cs">
       <DependentUpon>StudentAttendanceSummary.aspx</DependentUpon>
@@ -511,6 +580,13 @@
     <Compile Include="StudentProfileInfo.aspx.designer.cs">
       <DependentUpon>StudentProfileInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentTimetable.aspx.cs">
+      <DependentUpon>StudentTimetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentTimetable.aspx.designer.cs">
+      <DependentUpon>StudentTimetable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SubmitDocument.aspx.cs">
       <DependentUpon>SubmitDocument.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -546,6 +622,13 @@
     <Compile Include="SupervisorProfileInfo.aspx.designer.cs">
       <DependentUpon>SupervisorProfileInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SupervisorTimetable.aspx.cs">
+      <DependentUpon>SupervisorTimetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorTimetable.aspx.designer.cs">
+      <DependentUpon>SupervisorTimetable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpDelCLO.aspx.cs">
       <DependentUpon>UpDelCLO.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -566,6 +649,13 @@
     </Compile>
     <Compile Include="ViewAttendance.aspx.designer.cs">
       <DependentUpon>ViewAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewGroups.aspx.cs">
+      <DependentUpon>ViewGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewGroups.aspx.designer.cs">
+      <DependentUpon>ViewGroups.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewStudentNotifications.aspx.cs">
       <DependentUpon>ViewStudentNotifications.aspx</DependentUpon>
@@ -594,6 +684,13 @@
     </Compile>
     <Compile Include="ViewSupervisorTimetable.aspx.designer.cs">
       <DependentUpon>ViewSupervisorTimetable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTimetables.aspx.cs">
+      <DependentUpon>ViewTimetables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTimetables.aspx.designer.cs">
+      <DependentUpon>ViewTimetables.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
