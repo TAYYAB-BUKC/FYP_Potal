@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentProfileInfo.aspx.cs" Inherits="FYP_Portal.Web.StudentProfileInfo" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentChangePassword.aspx.cs" Inherits="FYP_Portal.Web.StudentChangePassword" %>
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -12,17 +11,38 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/dashbord_navitaion.css">
 <link rel="stylesheet" href="css/responsive.css">
-<title>Profile Information</title>
+<title>Change Password</title>
 <link href="images/favicon.png" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="images/favicon.png" sizes="128x128" rel="shortcut icon" />
+
+      <script type="text/javascript">
+        function validateAndHighlight() {
+            for (var i = 0; i < Page_Validators.length; i++) {
+                var val = Page_Validators[i];
+                var ctrl = document.getElementById(val.controltovalidate);
+                if (ctrl != null && ctrl.style != null) {
+                    if (!val.isvalid) {
+                      
+                        ctrl.style.borderColor = '#FF0000';
+                        ctrl.style.backgroundColor = '#FFFFFF';
+                    }
+                    else {
+                       
+                        ctrl.style.borderColor = '';
+                        ctrl.style.backgroundColor = '';
+                    }
+                }
+            }
+        }
+	  </script> 
 </head>
 <body>
 <div class="wrapper">
 	<div class="preloader"></div>
-	
+
 	<header class="header-nav menu_style_home_one dashbord_pages navbar-scrolltofixed stricky main-menu">
-		<div class="container-fluid">		 
-		    <nav>		     
+		<div class="container-fluid">
+		    <nav>
 		        <div class="menu-toggle">
 		            <img class="nav_logo_img img-fluid" src="images/logo bukc.png" alt="logo.png">
 		            <button type="button" id="menu-btn">
@@ -36,7 +56,7 @@
 		            <img class="logo2 img-fluid" src="images/logo bukc.png" alt="logo.png">
 		            <span>Bahria</span>
 		        </a>
-		       <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
+		      <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
 		             <li>
 		                <a href="Home.aspx"><span class="title">Home</span></a>		               
 		            </li>
@@ -62,23 +82,21 @@
 		            </li>
 		        </ul>
 
-		        <ul class="header_user_notif pull-right dn-smd">	               
+		        <ul class="header_user_notif pull-right dn-smd">	                
 	                <li class="user_setting">
 						<div class="dropdown">
 	                		<a class="btn dropdown-toggle" href="#" data-toggle="dropdown">
-              <img class="rounded-circle" runat="server" id="profileImage" src="" alt="profile.png">
-	                		</a>
-	                		
+           <img class="rounded-circle" runat="server" id="profileImage" src="" alt="profile.png"></a>
 						    <div class="dropdown-menu">
 						    	<div class="user_set_header">
-              <img class="rounded-circle" id="p" runat="server" alt="profile.png" src="" />
-                                     <br /> <br />
+				   <img class="rounded-circle" id="p" runat="server" alt="profile.png" src="" />
+                                    <br /> <br />
 							    	<p id="sname" runat="server"></p>
 						    	</div>
 						    	<div class="user_setting_content">
-<a class="dropdown-item active" id="sp" runat="server" href="StudentEditProfile.aspx">Edit Profile</a>
-<a class="dropdown-item" id="cp" runat="server" href="StudentChangePassword.aspx">Change Password</a>									
-<a class="dropdown-item" href="StudentLogin.aspx">Log out</a>
+									<a class="dropdown-item" id="sp" runat="server" href="StudentEditProfile.aspx">Edit Profile</a>
+									<a class="dropdown-item active" id="cp" runat="server" href="StudentChangePassword.aspx">Change Password</a>									
+									<a class="dropdown-item" href="StudentLogin.aspx">Log out</a>
 						    	</div>
 						    </div>
 						</div>
@@ -90,23 +108,22 @@
 
 	<div id="page" class="stylehome1 h0">
 		<div class="mobile-menu">
-	        <ul class="header_user_notif dashbord_pages_mobile_version pull-right">               
+	        <ul class="header_user_notif dashbord_pages_mobile_version pull-right">
                 <li class="user_setting">
 					<div class="dropdown">
                 		<a class="btn dropdown-toggle" href="#" data-toggle="dropdown">
-                            <img class="rounded-circle" runat="server" id="profileImage1" src="" alt="profile.png"></a>                             
-                		
+                <img class="rounded-circle" runat="server" id="profileImage1" src="" alt="profile.png"></a>                             
 					    <div class="dropdown-menu">
 					    	<div class="user_set_header">
-					    		  <img class="rounded-circle" id="p1" runat="server" alt="profile.png" src="" />
+					    		 <img class="rounded-circle" id="p1" runat="server" alt="profile.png" src="" />
                                <br /> <br />
 						    	<p id="sname1" runat="server"></p>
 					    	</div>
 					    	<div class="user_setting_content">
-<a class="dropdown-item active" id="sp1" runat="server" href="StudentEditProfile.aspx">Edit Profile</a>
-<a class="dropdown-item" id="cp1" runat="server" href="StudentChangePassword.aspx">Change Password</a>									
+<a class="dropdown-item" id="sp1" runat="server" href="StudentEditProfile.aspx">Edit Profile</a>
+<a class="dropdown-item active" id="cp1" runat="server" href="StudentChangePassword.aspx">Change Password</a>									
 <a class="dropdown-item" href="StudentLogin.aspx">Log out</a>
-						    	</div>
+					    	</div>
 					    </div>
 					</div>
 		        </li>
@@ -114,7 +131,7 @@
 			<div class="header stylehome1 dashbord_mobile_logo dashbord_pages">
 				<div class="main_logo_home2">
 		            <img class="nav_logo_img img-fluid float-left mt20" src="images/logo bukc.png" alt="logo.png">
-		            <span>Bahria</span>
+		            <span>Bahria </span>
 				</div>
 				<ul class="menu_bar_home2">
 					<li class="list-inline-item"></li>
@@ -136,18 +153,18 @@
 
 	<section class="dashboard_sidebar dn-1199">
 		<div class="dashboard_sidebars">
-			<div class="user_board">				
+			<div class="user_board">
+				
 				<div class="dashbord_nav_list">
 					<ul>
 <li><a id="dash" runat="server" href="StudentDashboard.aspx"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-<li class="active"><a id="pInfo" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
-<li><a id="notify" runat="server" href="ViewStudentNotifications.aspx"><span class="flaticon-speech-bubble"></span>Notifications</a></li>
-<li><a id="view" runat="server" href="ViewAttendance.aspx"><span class="flaticon-rating"></span> Attendance</a></li>                       
+<li><a id="pInfo" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
+<li><a id="notify" runat="server" href="ViewStudentNotifications.aspx"><span class="flaticon-speech-bubble"></span> Notifications</a></li>
+<li><a id="view" runat="server" href="ViewAttendance.aspx"><span class="flaticon-rating"></span>Attendance</a></li>                        
 <li><a id="vst" runat="server" href="ViewSupervisorTimetable.aspx"><span class="flaticon-like"></span> Supervisor Timetable</a></li>
-<li><a id="sg" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span> Grades</a></li>
+<li><a id="sg" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span>Grades</a></li>
 <li><a id="doc" runat="server" href="Documents.aspx"><span class="flaticon-add-contact"></span> Documentation</a></li>
-					</ul>
-					
+					</ul>					
 				</div>
 			</div>
 		</div>
@@ -162,83 +179,71 @@
 							<div class="dashboard_navigationbar dn db-1199">
 								<div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars pr10"></i> Dashboard Navigation</button>
-				<ul id="myDropdown" class="dropdown-content">
+<ul id="myDropdown" class="dropdown-content">										
 <li><a id="dash1" runat="server" href="StudentDashboard.aspx"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-<li class="active"><a id="pInfo1" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
+<li><a id="pInfo1" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
 <li><a id="notify1" runat="server" href="ViewStudentNotifications.aspx"><span class="flaticon-speech-bubble"></span>Notifications</a></li>
 <li><a id="view1" runat="server" href="ViewAttendance.aspx"><span class="flaticon-rating"></span> Attendance</a></li>                       
 <li><a id="vst1" runat="server" href="ViewSupervisorTimetable.aspx"><span class="flaticon-like"></span> Supervisor Timetable</a></li>
-<li><a id="sg1" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span> Grades</a></li>
+<li><a id="sg1" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span>Grades</a></li>
 <li><a id="doc1" runat="server" href="Documents.aspx"><span class="flaticon-add-contact"></span> Documentation</a></li>
-					</ul>
+</ul>
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-12">
 							<nav class="breadcrumb_widgets" aria-label="breadcrumb mb30">
-								<h4 class="title float-left">Profile Information</h4>
+								<h4 class="title float-left">Change Password</h4>
 							</nav>
 						</div>
 
-						<div class="col-lg-12">
+						<div class="col-lg-12" >
 							<div class="my_course_content_container">
 								<div class="my_course_content mb30">
-									<div class="my_course_content_header">									
-                                        <table class="table table-bordered table-condensed info table-responsive tableCol4">
-				<tbody>
-                    <tr>
-					<th>Enrollment</th>
-					<td id="enroll" runat="server"> </td>
-					<th>Registration No.</th>
-					<td id="regnum" runat="server"> </td>
-				</tr>
-				<tr>
-					<th>Name</th>
-					<td id="stdname" runat="server"> </td>
-					<th>Father Name</th>
-					<td id="fname" runat="server"> </td>
-				</tr>
-				<tr>
-					<th>Class</th>
-					<td id="class1" runat="server"> </td>
-					<th>Institute</th>
-					<td id="inst" runat="server"> </td>
-				</tr>	
-                    
-				<tr>
-					<th>Mobile No.</th>
-					<td id="mobnum" runat="server"> </td>
-					<th>Personal Email</th>
-					<td id="pemail" runat="server"> </td>
-				</tr>		
-                    <tr>
-					<th>Supervisor Name</th>
-					<td id="supervisorname" runat="server"> </td>
-					<th>FYP Title</th>
-					<td id="fyptitle" runat="server"> </td>
-				</tr>
-			    <tr>
-					<th>Grade</th>
-					<td id="grade" runat="server">Not Added Yet </td>
-					<th>CGPA of FYP</th>
-					<td id="CGPA" runat="server"> Not Added Yet </td>
-				</tr>
-             </tbody>
-        </table>
-                                        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+									<div class="my_course_content_header">	
+                                   <form action="#" runat="server">
+
+ <div class="form-group">
+                                 <label class="control-label"> Old Password
+ <asp:RequiredFieldValidator ID="rfv1" runat="server" ControlToValidate="OldPassword" Display="Dynamic" 
+     ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator></label><br />
+<asp:TextBox ID="OldPassword" type="password" class="form-control" runat="server"></asp:TextBox>                            
+							 </div>
+
+							<div class="form-group">
+                                 <label class="control-label"> New Password
+ <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="NewPassword" Display="Dynamic" 
+     ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator></label><br />
+<asp:TextBox ID="NewPassword" type="password" class="form-control" runat="server"></asp:TextBox>                            
+							 </div>
+
+                                       <div class="form-group">
+                                 <label class="control-label"> Confirm New Password
+ <asp:RequiredFieldValidator ID="rfv3"  runat="server" ControlToValidate="ConPassword" Display="Dynamic" 
+     ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator></label><br />
+<asp:TextBox ID="ConPassword" type="password" class="form-control" runat="server"></asp:TextBox>                            
+							 </div>
+           <asp:Button class="btn btn-log btn-block btn-thm2" ID="BtnUpdate" runat="server" Text="Update" OnClick="BtnUpdate_Click1"/>  
+                         
+                                     
+  </form>
+						<asp:Label ID="enrollment" type="hidden" runat="server" ></asp:Label>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+</div> 
 								</div>                                    
-     <asp:Label ID="enrollment" type="hidden" runat="server" ></asp:Label>
-          
 						   </div>
 				     </div>
 				</div>
 			</div>
 		</div>
+            </div>
 	</div>
-		</div>
-		</div>
 <a class="scrollToHome" href="#"><i class="flaticon-up-arrow-1"></i></a>
 </div>
+
 
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-3.0.0.min.js"></script>
@@ -259,8 +264,6 @@
 <script type="text/javascript" src="js/timepicker.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/dashboard-script.js"></script>
-<!-- Custom script for all pages --> 
 <script type="text/javascript" src="js/script.js"></script>
 </body>
-
 </html>

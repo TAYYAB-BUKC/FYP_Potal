@@ -11,7 +11,7 @@ namespace FYP_Portal.Web
 {
 
 
-	public partial class StudentProfileInfo
+	public partial class GradeDetailsForFYPCoordinator
 	{
 
 		/// <summary>
@@ -33,13 +33,13 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlImage p;
 
 		/// <summary>
-		/// sname control.
+		/// fname control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlGenericControl sname;
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl fname;
 
 		/// <summary>
 		/// sp control.
@@ -78,13 +78,13 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlImage p1;
 
 		/// <summary>
-		/// sname1 control.
+		/// fname1 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlGenericControl sname1;
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl fname1;
 
 		/// <summary>
 		/// sp1 control.
@@ -105,220 +105,139 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlAnchor cp1;
 
 		/// <summary>
-		/// dash control.
+		/// groupNumber control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor dash;
+		protected global::System.Web.UI.WebControls.DropDownList groupNumber;
 
 		/// <summary>
-		/// pInfo control.
+		/// MidYearMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor pInfo;
+		protected global::System.Web.UI.WebControls.Button MidYearMarks;
 
 		/// <summary>
-		/// notify control.
+		/// FinalYearMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor notify;
+		protected global::System.Web.UI.WebControls.Button FinalYearMarks;
 
 		/// <summary>
-		/// view control.
+		/// GenerateMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor view;
+		protected global::System.Web.UI.WebControls.Button GenerateMarks;
 
 		/// <summary>
-		/// vst control.
+		/// controls control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor vst;
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl controls;
 
 		/// <summary>
-		/// sg control.
+		/// midYearLBM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor sg;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearLBM;
 
 		/// <summary>
-		/// doc control.
+		/// finalYearLBM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor doc;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearLBM;
 
 		/// <summary>
-		/// dash1 control.
+		/// midYearRM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor dash1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearRM;
 
 		/// <summary>
-		/// pInfo1 control.
+		/// finalYearRM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor pInfo1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearRM;
 
 		/// <summary>
-		/// notify1 control.
+		/// midYearEM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor notify1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearEM;
 
 		/// <summary>
-		/// view1 control.
+		/// finalYearEM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor view1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearEM;
 
 		/// <summary>
-		/// vst1 control.
+		/// midYearEvaluationMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor vst1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearEvaluationMarks;
 
 		/// <summary>
-		/// sg1 control.
+		/// finalYearEvaluationMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor sg1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearEvaluationMarks;
 
 		/// <summary>
-		/// doc1 control.
+		/// totalMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor doc1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell totalMarks;
 
 		/// <summary>
-		/// enroll control.
+		/// marksObtained control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell enroll;
-
-		/// <summary>
-		/// regnum control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell regnum;
-
-		/// <summary>
-		/// stdname control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell stdname;
-
-		/// <summary>
-		/// fname control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fname;
-
-		/// <summary>
-		/// class1 control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell class1;
-
-		/// <summary>
-		/// inst control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell inst;
-
-		/// <summary>
-		/// mobnum control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell mobnum;
-
-		/// <summary>
-		/// pemail control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell pemail;
-
-		/// <summary>
-		/// supervisorname control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell supervisorname;
-
-		/// <summary>
-		/// fyptitle control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fyptitle;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell marksObtained;
 
 		/// <summary>
 		/// grade control.
@@ -346,5 +265,14 @@ namespace FYP_Portal.Web
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Label enrollment;
+
+		/// <summary>
+		/// email control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label email;
 	}
 }

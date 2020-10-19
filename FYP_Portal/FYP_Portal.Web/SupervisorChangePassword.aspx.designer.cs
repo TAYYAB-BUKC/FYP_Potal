@@ -11,7 +11,7 @@ namespace FYP_Portal.Web
 {
 
 
-	public partial class StudentProfileInfo
+	public partial class SupervisorChangePassword
 	{
 
 		/// <summary>
@@ -33,13 +33,13 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlImage p;
 
 		/// <summary>
-		/// sname control.
+		/// spname control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlGenericControl sname;
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl spname;
 
 		/// <summary>
 		/// sp control.
@@ -78,13 +78,13 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlImage p1;
 
 		/// <summary>
-		/// sname1 control.
+		/// spname1 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlGenericControl sname1;
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl spname1;
 
 		/// <summary>
 		/// sp1 control.
@@ -105,13 +105,13 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlAnchor cp1;
 
 		/// <summary>
-		/// dash control.
+		/// sd control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor dash;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor sd;
 
 		/// <summary>
 		/// pInfo control.
@@ -123,22 +123,31 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlAnchor pInfo;
 
 		/// <summary>
-		/// notify control.
+		/// vsn control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor notify;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor vsn;
 
 		/// <summary>
-		/// view control.
+		/// mark control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor view;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor mark;
+
+		/// <summary>
+		/// grps control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor grps;
 
 		/// <summary>
 		/// vst control.
@@ -150,201 +159,147 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlAnchor vst;
 
 		/// <summary>
-		/// sg control.
+		/// pe control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor sg;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor pe;
 
 		/// <summary>
-		/// doc control.
+		/// re control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor doc;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor re;
 
 		/// <summary>
-		/// dash1 control.
+		/// lbe control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor dash1;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor lbe;
 
 		/// <summary>
-		/// pInfo1 control.
+		/// pes control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor pInfo1;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor pes;
 
 		/// <summary>
-		/// notify1 control.
+		/// res control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor notify1;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor res;
 
 		/// <summary>
-		/// view1 control.
+		/// lbs control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor view1;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor lbs;
 
 		/// <summary>
-		/// vst1 control.
+		/// grds control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor vst1;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor grds;
 
 		/// <summary>
-		/// sg1 control.
+		/// file control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor sg1;
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor file;
 
 		/// <summary>
-		/// doc1 control.
+		/// rfv1 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlAnchor doc1;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv1;
 
 		/// <summary>
-		/// enroll control.
+		/// OldPassword control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell enroll;
+		protected global::System.Web.UI.WebControls.TextBox OldPassword;
 
 		/// <summary>
-		/// regnum control.
+		/// rfv2 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell regnum;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv2;
 
 		/// <summary>
-		/// stdname control.
+		/// NewPassword control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell stdname;
+		protected global::System.Web.UI.WebControls.TextBox NewPassword;
 
 		/// <summary>
-		/// fname control.
+		/// rfv3 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fname;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv3;
 
 		/// <summary>
-		/// class1 control.
+		/// ConPassword control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell class1;
+		protected global::System.Web.UI.WebControls.TextBox ConPassword;
 
 		/// <summary>
-		/// inst control.
+		/// BtnUpdate control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell inst;
+		protected global::System.Web.UI.WebControls.Button BtnUpdate;
 
 		/// <summary>
-		/// mobnum control.
+		/// email control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell mobnum;
-
-		/// <summary>
-		/// pemail control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell pemail;
-
-		/// <summary>
-		/// supervisorname control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell supervisorname;
-
-		/// <summary>
-		/// fyptitle control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fyptitle;
-
-		/// <summary>
-		/// grade control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell grade;
-
-		/// <summary>
-		/// CGPA control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell CGPA;
-
-		/// <summary>
-		/// enrollment control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label enrollment;
+		protected global::System.Web.UI.WebControls.Label email;
 	}
 }

@@ -71,4 +71,69 @@ public class MyGuid
 
         return password;
     }
+
+    public static string GetRandomPassword()
+    {
+        char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+        string password = string.Empty;
+        Random random = new Random();
+
+        for (int i = 0; i < 1; i++)
+        {
+            int x = random.Next(0, 25);
+            //For avoiding Repetation of Characters
+            if (!password.Contains(chars.GetValue(x).ToString()))
+                password += chars.GetValue(x);
+            else
+                i = i - 1;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            int x = random.Next(26, 35);
+            //For avoiding Repetation of Characters
+            if (!password.Contains(chars.GetValue(x).ToString()))
+                password += chars.GetValue(x);
+            else
+                i = i - 1;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            int x = random.Next(0, 25);
+            //For avoiding Repetation of Characters
+            if (!password.Contains(chars.GetValue(x).ToString()))
+                password += chars.GetValue(x);
+            else
+                i = i - 1;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            int x = random.Next(26, 35);
+            //For avoiding Repetation of Characters
+            if (!password.Contains(chars.GetValue(x).ToString()))
+                password += chars.GetValue(x);
+            else
+                i = i - 1;
+        }
+
+        for (int i = 0; i < 1; i++)
+        {
+            int x = random.Next(0, 25);
+            //For avoiding Repetation of Characters
+            if (!password.Contains(chars.GetValue(x).ToString()))
+                password += chars.GetValue(x);
+            else
+                i = i - 1;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            int x = random.Next(26, 35);
+            //For avoiding Repetation of Characters
+            if (!password.Contains(chars.GetValue(x).ToString()))
+                password += chars.GetValue(x);
+            else
+                i = i - 1;
+        }
+        return password;
+    }
+
 }

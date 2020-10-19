@@ -11,7 +11,7 @@ namespace FYP_Portal.Web
 {
 
 
-	public partial class StudentProfileInfo
+	public partial class StudentChangePassword
 	{
 
 		/// <summary>
@@ -231,112 +231,67 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlAnchor doc1;
 
 		/// <summary>
-		/// enroll control.
+		/// rfv1 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell enroll;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv1;
 
 		/// <summary>
-		/// regnum control.
+		/// OldPassword control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell regnum;
+		protected global::System.Web.UI.WebControls.TextBox OldPassword;
 
 		/// <summary>
-		/// stdname control.
+		/// rfv2 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell stdname;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv2;
 
 		/// <summary>
-		/// fname control.
+		/// NewPassword control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fname;
+		protected global::System.Web.UI.WebControls.TextBox NewPassword;
 
 		/// <summary>
-		/// class1 control.
+		/// rfv3 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell class1;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv3;
 
 		/// <summary>
-		/// inst control.
+		/// ConPassword control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell inst;
+		protected global::System.Web.UI.WebControls.TextBox ConPassword;
 
 		/// <summary>
-		/// mobnum control.
+		/// BtnUpdate control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell mobnum;
-
-		/// <summary>
-		/// pemail control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell pemail;
-
-		/// <summary>
-		/// supervisorname control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell supervisorname;
-
-		/// <summary>
-		/// fyptitle control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fyptitle;
-
-		/// <summary>
-		/// grade control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell grade;
-
-		/// <summary>
-		/// CGPA control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell CGPA;
+		protected global::System.Web.UI.WebControls.Button BtnUpdate;
 
 		/// <summary>
 		/// enrollment control.

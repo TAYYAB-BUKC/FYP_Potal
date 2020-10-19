@@ -173,8 +173,10 @@
     <Content Include="fonts\fontawesome-webfont3e6e.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\slick.svg" />
+    <Content Include="FYPCoordinatorChangePassword.aspx" />
     <Content Include="FYPCoordinatorDashboard.aspx" />
     <Content Include="FYPCoordinatorEditProfile.aspx" />
+    <Content Include="FYPCoordinatorForgotPassword.aspx" />
     <Content Include="FYPCoordinatorImages\dvcnpkyminaeteacher_icon2.png" />
     <Content Include="FYPCoordinatorImages\icon.png" />
     <Content Include="FYPCoordinatorImages\waupbhteacher_icon4.jpg" />
@@ -204,6 +206,9 @@
     <Content Include="fonts\slick.woff" />
     <Content Include="fonts\slickd41d.eot" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="GradeDetailsForFYPCoordinator.aspx" />
+    <Content Include="GradeDetailsForStudent.aspx" />
+    <Content Include="GradeDetaisForSupervisor.aspx" />
     <Content Include="Groups.aspx" />
     <Content Include="GroupsAttendanceSummary.aspx" />
     <Content Include="Home.aspx" />
@@ -294,8 +299,10 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="StudentAttendanceSummary.aspx" />
+    <Content Include="StudentChangePassword.aspx" />
     <Content Include="StudentDashboard.aspx" />
     <Content Include="StudentEditProfile.aspx" />
+    <Content Include="StudentForgotPassword.aspx" />
     <Content Include="StudentImages\fweqrsboy_icon.png" />
     <Content Include="StudentImages\icon.png" />
     <Content Include="StudentImages\xtqscmpmjiyegirl_icon.png" />
@@ -303,8 +310,10 @@
     <Content Include="StudentProfileInfo.aspx" />
     <Content Include="StudentTimetable.aspx" />
     <Content Include="SubmitDocument.aspx" />
+    <Content Include="SupervisorChangePassword.aspx" />
     <Content Include="SupervisorDashboard.aspx" />
     <Content Include="SupervisorEditProfile.aspx" />
+    <Content Include="SupervisorForgotPassword.aspx" />
     <Content Include="SupervisorImages\bnvdiyahmbrjteacher_icon3.jpg" />
     <Content Include="SupervisorImages\cdugtwmieswypmjiyegirl_icon.png" />
     <Content Include="SupervisorImages\hlimkateacher_icon.png" />
@@ -349,6 +358,8 @@
       <DependentUpon>AddPLO.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Data\Cryptography.cs" />
+    <Compile Include="App_Data\Grades.cs" />
+    <Compile Include="App_Data\GroupMarksReport.cs" />
     <Compile Include="App_Data\MyGuid.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -415,6 +426,13 @@
     <Compile Include="Files.aspx.designer.cs">
       <DependentUpon>Files.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FYPCoordinatorChangePassword.aspx.cs">
+      <DependentUpon>FYPCoordinatorChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FYPCoordinatorChangePassword.aspx.designer.cs">
+      <DependentUpon>FYPCoordinatorChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FYPCoordinatorDashboard.aspx.cs">
       <DependentUpon>FYPCoordinatorDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -428,6 +446,13 @@
     </Compile>
     <Compile Include="FYPCoordinatorEditProfile.aspx.designer.cs">
       <DependentUpon>FYPCoordinatorEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FYPCoordinatorForgotPassword.aspx.cs">
+      <DependentUpon>FYPCoordinatorForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FYPCoordinatorForgotPassword.aspx.designer.cs">
+      <DependentUpon>FYPCoordinatorForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="FYPCoordinatorLogin.aspx.cs">
       <DependentUpon>FYPCoordinatorLogin.aspx</DependentUpon>
@@ -445,6 +470,27 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GradeDetailsForFYPCoordinator.aspx.cs">
+      <DependentUpon>GradeDetailsForFYPCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GradeDetailsForFYPCoordinator.aspx.designer.cs">
+      <DependentUpon>GradeDetailsForFYPCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GradeDetailsForStudent.aspx.cs">
+      <DependentUpon>GradeDetailsForStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GradeDetailsForStudent.aspx.designer.cs">
+      <DependentUpon>GradeDetailsForStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GradeDetaisForSupervisor.aspx.cs">
+      <DependentUpon>GradeDetaisForSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GradeDetaisForSupervisor.aspx.designer.cs">
+      <DependentUpon>GradeDetaisForSupervisor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Groups.aspx.cs">
       <DependentUpon>Groups.aspx</DependentUpon>
@@ -552,6 +598,13 @@
     <Compile Include="StudentAttendanceSummary.aspx.designer.cs">
       <DependentUpon>StudentAttendanceSummary.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentChangePassword.aspx.cs">
+      <DependentUpon>StudentChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentChangePassword.aspx.designer.cs">
+      <DependentUpon>StudentChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StudentDashboard.aspx.cs">
       <DependentUpon>StudentDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -565,6 +618,13 @@
     </Compile>
     <Compile Include="StudentEditProfile.aspx.designer.cs">
       <DependentUpon>StudentEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForgotPassword.aspx.cs">
+      <DependentUpon>StudentForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentForgotPassword.aspx.designer.cs">
+      <DependentUpon>StudentForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentLogin.aspx.cs">
       <DependentUpon>StudentLogin.aspx</DependentUpon>
@@ -594,6 +654,13 @@
     <Compile Include="SubmitDocument.aspx.designer.cs">
       <DependentUpon>SubmitDocument.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SupervisorChangePassword.aspx.cs">
+      <DependentUpon>SupervisorChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorChangePassword.aspx.designer.cs">
+      <DependentUpon>SupervisorChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SupervisorDashboard.aspx.cs">
       <DependentUpon>SupervisorDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -607,6 +674,13 @@
     </Compile>
     <Compile Include="SupervisorEditProfile.aspx.designer.cs">
       <DependentUpon>SupervisorEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorForgotPassword.aspx.cs">
+      <DependentUpon>SupervisorForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorForgotPassword.aspx.designer.cs">
+      <DependentUpon>SupervisorForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="SupervisorLogin.aspx.cs">
       <DependentUpon>SupervisorLogin.aspx</DependentUpon>

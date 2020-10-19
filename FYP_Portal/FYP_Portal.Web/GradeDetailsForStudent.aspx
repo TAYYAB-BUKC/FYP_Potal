@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentProfileInfo.aspx.cs" Inherits="FYP_Portal.Web.StudentProfileInfo" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GradeDetailsForStudent.aspx.cs" Inherits="FYP_Portal.Web.GradeDetailsForStudent" %>
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -12,7 +11,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/dashbord_navitaion.css">
 <link rel="stylesheet" href="css/responsive.css">
-<title>Profile Information</title>
+<title>Grades</title>
 <link href="images/favicon.png" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="images/favicon.png" sizes="128x128" rel="shortcut icon" />
 </head>
@@ -38,7 +37,7 @@
 		        </a>
 		       <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
 		             <li>
-		                <a href="Home.aspx"><span class="title">Home</span></a>		               
+		                <a href="Default.aspx"><span class="title">Home</span></a>		               
 		            </li>
 
 		             <li>
@@ -62,7 +61,77 @@
 		            </li>
 		        </ul>
 
-		        <ul class="header_user_notif pull-right dn-smd">	               
+		        <ul class="header_user_notif pull-right dn-smd">
+	                <li class="user_notif">
+						<div class="dropdown">
+						    <a class="notification_icon" href="#" data-toggle="dropdown"><span class="flaticon-email"></span></a>
+						    <div class="dropdown-menu notification_dropdown_content">
+								<div class="so_heading">
+									<p>Notifications</p>
+								</div>
+								<div class="so_content" data-simplebar="init">
+									<ul>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>										
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+									</ul>
+								</div>
+							<a class="view_all_noti text-thm" href="#">View all alerts</a>
+						    </div>
+						</div>
+	                </li>
+	                <li class="user_notif">
+						<div class="dropdown">
+						    <a class="notification_icon" href="#" data-toggle="dropdown"><span class="flaticon-alarm"></span></a>
+						    <div class="dropdown-menu notification_dropdown_content">
+								<div class="so_heading">
+									<p>Notifications</p>
+								</div>
+								<div class="so_content" data-simplebar="init">
+									<ul>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>
+										<li>
+											<h5>Status Update</h5>
+											<p>This is an automated server response message. All systems are online.</p>
+										</li>										
+									</ul>
+								</div>
+							<a class="view_all_noti text-thm" href="#">View all alerts</a>
+						    </div>
+						</div>
+	                </li>
 	                <li class="user_setting">
 						<div class="dropdown">
 	                		<a class="btn dropdown-toggle" href="#" data-toggle="dropdown">
@@ -90,7 +159,69 @@
 
 	<div id="page" class="stylehome1 h0">
 		<div class="mobile-menu">
-	        <ul class="header_user_notif dashbord_pages_mobile_version pull-right">               
+	        <ul class="header_user_notif dashbord_pages_mobile_version pull-right">
+                <li class="user_notif">
+					<div class="dropdown">
+					    <a class="notification_icon" href="#" data-toggle="dropdown"><span class="flaticon-email"></span></a>
+					    <div class="dropdown-menu notification_dropdown_content">
+							<div class="so_heading">
+								<p>Notifications</p>
+							</div>
+							<div class="so_content" data-simplebar="init">
+								<ul>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>									
+								</ul>
+							</div>
+							<a class="view_all_noti text-thm" href="#">View all alerts</a>
+					    </div>
+					</div>
+                </li>
+                <li class="user_notif">
+					<div class="dropdown">
+					    <a class="notification_icon" href="#" data-toggle="dropdown"><span class="flaticon-alarm"></span></a>
+					    <div class="dropdown-menu notification_dropdown_content">
+							<div class="so_heading">
+								<p>Notifications</p>
+							</div>
+							<div class="so_content" data-simplebar="init">
+								<ul>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>
+									<li>
+										<h5>Status Update</h5>
+										<p>This is an automated server response message. All systems are online.</p>
+									</li>									
+								</ul>
+							</div>
+							<a class="view_all_noti text-thm" href="#">View all alerts</a>
+					    </div>
+					</div>
+                </li>
                 <li class="user_setting">
 					<div class="dropdown">
                 		<a class="btn dropdown-toggle" href="#" data-toggle="dropdown">
@@ -103,9 +234,9 @@
 						    	<p id="sname1" runat="server"></p>
 					    	</div>
 					    	<div class="user_setting_content">
-<a class="dropdown-item active" id="sp1" runat="server" href="StudentEditProfile.aspx">Edit Profile</a>
-<a class="dropdown-item" id="cp1" runat="server" href="StudentChangePassword.aspx">Change Password</a>									
-<a class="dropdown-item" href="StudentLogin.aspx">Log out</a>
+								<a class="dropdown-item active" id="sp1" runat="server" href="StudentEditProfile.aspx">Edit Profile</a>
+									<a class="dropdown-item" id="cp1" runat="server" href="StudentChangePassword.aspx">Change Password</a>									
+									<a class="dropdown-item" href="StudentLogin.aspx">Log out</a>
 						    	</div>
 					    </div>
 					</div>
@@ -124,7 +255,7 @@
 		</div>
 		<nav id="menu" class="stylehome1">
 			<ul>
-		        <li><a href="Home.aspx">Home</a></li>
+		        <li><a href="Default.aspx">Home</a></li>
                 <li><a href="FYPCoordinatorLogin.aspx">FYP Coordinator</a></li>
                 <li><a href="SupervisorLogin.aspx">Supervisor </a></li> 
                 <li><a href="StudentLogin.aspx">Student</a></li>
@@ -140,11 +271,11 @@
 				<div class="dashbord_nav_list">
 					<ul>
 <li><a id="dash" runat="server" href="StudentDashboard.aspx"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-<li class="active"><a id="pInfo" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
+<li><a id="pInfo" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
 <li><a id="notify" runat="server" href="ViewStudentNotifications.aspx"><span class="flaticon-speech-bubble"></span>Notifications</a></li>
 <li><a id="view" runat="server" href="ViewAttendance.aspx"><span class="flaticon-rating"></span> Attendance</a></li>                       
 <li><a id="vst" runat="server" href="ViewSupervisorTimetable.aspx"><span class="flaticon-like"></span> Supervisor Timetable</a></li>
-<li><a id="sg" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span> Grades</a></li>
+<li class="active"><a id="sg" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span> Grades</a></li>
 <li><a id="doc" runat="server" href="Documents.aspx"><span class="flaticon-add-contact"></span> Documentation</a></li>
 					</ul>
 					
@@ -164,11 +295,11 @@
 				<button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars pr10"></i> Dashboard Navigation</button>
 				<ul id="myDropdown" class="dropdown-content">
 <li><a id="dash1" runat="server" href="StudentDashboard.aspx"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-<li class="active"><a id="pInfo1" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
+<li><a id="pInfo1" runat="server" href="StudentProfileInfo.aspx"><span class="flaticon-online-learning"></span> Profile Information</a></li>						
 <li><a id="notify1" runat="server" href="ViewStudentNotifications.aspx"><span class="flaticon-speech-bubble"></span>Notifications</a></li>
 <li><a id="view1" runat="server" href="ViewAttendance.aspx"><span class="flaticon-rating"></span> Attendance</a></li>                       
 <li><a id="vst1" runat="server" href="ViewSupervisorTimetable.aspx"><span class="flaticon-like"></span> Supervisor Timetable</a></li>
-<li><a id="sg1" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span> Grades</a></li>
+<li class="active"><a id="sg1" runat="server" href="GradeDetailsForStudent.aspx"><span class="flaticon-rating"></span> Grades</a></li>
 <li><a id="doc1" runat="server" href="Documents.aspx"><span class="flaticon-add-contact"></span> Documentation</a></li>
 					</ul>
 								</div>
@@ -176,7 +307,7 @@
 						</div>
 						<div class="col-lg-12">
 							<nav class="breadcrumb_widgets" aria-label="breadcrumb mb30">
-								<h4 class="title float-left">Profile Information</h4>
+								<h4 class="title float-left">Grade Details</h4>
 							</nav>
 						</div>
 
@@ -187,48 +318,45 @@
                                         <table class="table table-bordered table-condensed info table-responsive tableCol4">
 				<tbody>
                     <tr>
-					<th>Enrollment</th>
-					<td id="enroll" runat="server"> </td>
-					<th>Registration No.</th>
-					<td id="regnum" runat="server"> </td>
+					<th>Mid Year Log Book Marks</th>
+					<td id="midYearLBM" runat="server"> </td>
+					<th>Final Year Log Book Marks</th>
+					<td id="finalYearLBM" runat="server"> </td>
 				</tr>
 				<tr>
-					<th>Name</th>
-					<td id="stdname" runat="server"> </td>
-					<th>Father Name</th>
-					<td id="fname" runat="server"> </td>
+					<th>Mid Year Report Marks</th>
+					<td id="midYearRM" runat="server"> </td>
+					<th>Final Year Report Marks</th>
+					<td id="finalYearRM" runat="server"> </td>
 				</tr>
 				<tr>
-					<th>Class</th>
-					<td id="class1" runat="server"> </td>
-					<th>Institute</th>
-					<td id="inst" runat="server"> </td>
+					<th>Mid Year Evaluation Marks</th>
+					<td id="midYearEM" runat="server"> </td>
+					<th>Final Year Evaluation Marks</th>
+					<td id="finalYearEM" runat="server"> </td>
 				</tr>	
-                    
+                   <tr>
+					<th>Total Mid Year Evaluation Marks</th>
+					<td id="midYearEvaluationMarks" runat="server"> </td>
+					<th>Total Final Year Evaluation Marks</th>
+					<td id="finalYearEvaluationMarks" runat="server"> </td>
+				</tr> 
 				<tr>
-					<th>Mobile No.</th>
-					<td id="mobnum" runat="server"> </td>
-					<th>Personal Email</th>
-					<td id="pemail" runat="server"> </td>
+					<th>Total Marks</th>
+					<td id="totalMarks" runat="server"> </td>
+					<th>Marks Obtained</th>
+					<td id="marksObtained" runat="server"> </td>
 				</tr>		
                     <tr>
-					<th>Supervisor Name</th>
-					<td id="supervisorname" runat="server"> </td>
-					<th>FYP Title</th>
-					<td id="fyptitle" runat="server"> </td>
-				</tr>
-			    <tr>
 					<th>Grade</th>
 					<td id="grade" runat="server">Not Added Yet </td>
 					<th>CGPA of FYP</th>
 					<td id="CGPA" runat="server"> Not Added Yet </td>
 				</tr>
-             </tbody>
+			</tbody>
         </table>
-                                        <br /><br /><br /><br /><br /><br /><br /><br /><br />
 								</div>                                    
      <asp:Label ID="enrollment" type="hidden" runat="server" ></asp:Label>
-          
 						   </div>
 				     </div>
 				</div>
@@ -259,8 +387,7 @@
 <script type="text/javascript" src="js/timepicker.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/dashboard-script.js"></script>
-<!-- Custom script for all pages --> 
 <script type="text/javascript" src="js/script.js"></script>
 </body>
-
 </html>
+

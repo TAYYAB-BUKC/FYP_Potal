@@ -11,26 +11,27 @@ using System.Web.UI.WebControls;
 
 namespace FYP_Portal.Web
 {
-
-    public partial class StudentProfileInfo : System.Web.UI.Page
-    {
+	public partial class GradeDetailsForStudent : System.Web.UI.Page
+	{
         SqlCommand cmd;
         SqlConnection con;
         SqlDataAdapter da;
         private List<object> logBookCLOs = new List<object>(20);
         private List<object> reportCLOs = new List<object>(20);
         private List<object> evaluationCLOs = new List<object>(20);
-        private double logBookMarks = 0.0;
-        private double reportMarks = 0.0;
+        private double logBookMidMarks = 0.0;
+        private double logBookFinalMarks = 0.0;
+        private double reportMidMarks = 0.0;
+        private double reportFinalMarks = 0.0;
         private double evaluationMidMarks = 0.0;
         private double evaluationFinalMarks = 0.0;
-        private int groupID;
+        private int groupID = 0;
         private string errorString = "";
         private string error = "All CLO(s) are not marked yet";
         private bool isSkipTrue = false;
-        string n;
-        string i;
         string E;
+        string i;
+        string n;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,21 +44,28 @@ namespace FYP_Portal.Web
                 n = Session["name"].ToString();
                 i = Session["image"].ToString();
                 E = Session["enroll"].ToString();
+                groupID = FetchGroup(E);
                 enrollment.Text = E;
                 enrollment.Visible = false;
                 profileImage.Src = i;
                 p.Src = i;
                 profileImage1.Src = i;
                 p1.Src = i;
+
                 sname.InnerText = n;
                 sname1.InnerText = n;
             }
+            CheckForGrades();
+        }
 
-
+        private int FetchGroup(string Enrollment)
+        {
+            int s = 0;
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
-            cmd = new SqlCommand("select * from RegisterStudent inner join RegisterSupervisor on RegisterStudent.SupervisorID = RegisterSupervisor.Email inner join Groups on RegisterStudent.GroupID = Groups.Id where Enrollment = @Enrollment", con);
-            cmd.Parameters.AddWithValue("@Enrollment", SqlDbType.VarChar).Value = E;
+            cmd = new SqlCommand("select GroupID from RegisterStudent where Enrollment = @Enrollment", con);
+
+            cmd.Parameters.AddWithValue("@Enrollment", SqlDbType.VarChar).Value = Enrollment;
 
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
@@ -65,62 +73,17 @@ namespace FYP_Portal.Web
 
                 while (reader.Read())
                 {
-                    enroll.InnerText = reader.GetString(0);
-                    stdname.InnerText = reader.GetString(1);
-                    regnum.InnerText = reader.GetString(2);
-                    fname.InnerText = reader.GetString(3);
-                    inst.InnerText = reader.GetString(6);
-                    class1.InnerText = reader.GetString(10);
-                    mobnum.InnerText = reader.GetString(4);
-                    pemail.InnerText = reader.GetString(5);
-                    fyptitle.InnerText = reader.GetString(13);
-                    supervisorname.InnerText = reader.GetString(15);
+                    s = reader.GetInt32(0);
                 }
+                return s;
             }
-            reader.Close();
-            con.Close();
-            CheckForGrades();
-        }
-
-        private void FetchCLOs()
-        {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            con.Open();
-            DataTable dt = new DataTable();
-            da = new SqlDataAdapter("select Id,Name from CLO order by CLONumber", con);
-            da.Fill(dt);
-            con.Close();
-
-            if (dt != null)
+            else
             {
-                if (dt.Rows.Count > 0)
-                {
-                    foreach (DataRow clo in dt.Rows)
-                    {
-                        if (clo["Name"].ToString() == "CLO 8")
-                        {
-                            reportCLOs.Add(clo["Id"]);
-                        }
-                        else if (clo["Name"].ToString() == "CLO 9")
-                        {
-                            logBookCLOs.Add(clo["Id"]);
-                        }
-                        else if (clo["Name"].ToString() == "CLO 10")
-                        {
-                            reportCLOs.Add(clo["Id"]);
-                        }
-                        else if (clo["Name"].ToString() == "CLO 11")
-                        {
-                            logBookCLOs.Add(clo["Id"]);
-                        }
-                        else
-                        {
-                            evaluationCLOs.Add(clo["Id"]);
-                        }
-                    }
-                }
+                return s;
             }
         }
+
+
 
         private void CheckForGrades()
         {
@@ -133,8 +96,63 @@ namespace FYP_Portal.Web
 
             if (errorString != "")
             {
+                if (logBookMidMarks > 0)
+                {
+                    midYearLBM.InnerText = logBookMidMarks.ToString();
+                }
+                else
+                {
+                    midYearLBM.InnerText = errorString;
+                }
+                if (logBookFinalMarks > 0)
+                {
+                    finalYearLBM.InnerText = logBookFinalMarks.ToString();
+                }
+                else
+                {
+                    finalYearLBM.InnerText = errorString;
+                }
+                if (reportMidMarks > 0)
+                {
+                    midYearRM.InnerText = reportMidMarks.ToString();
+                }
+                else
+                {
+                    midYearRM.InnerText = errorString;
+                }
+                if (reportFinalMarks > 0)
+                {
+                    finalYearRM.InnerText = reportFinalMarks.ToString();
+                }
+                else
+                {
+                    finalYearRM.InnerText = errorString;
+                }
+
+                if (evaluationMidMarks > 0)
+                {
+                    midYearEM.InnerText = evaluationMidMarks.ToString();
+                }
+                else
+                {
+                    midYearEM.InnerText = errorString;
+                }
+                if (evaluationFinalMarks > 0)
+                {
+                    finalYearEM.InnerText = evaluationFinalMarks.ToString();
+                }
+                else
+                {
+                    finalYearEM.InnerText = errorString;
+                }
+
                 grade.InnerText = errorString;
                 CGPA.InnerText = errorString;
+                totalMarks.InnerText = errorString;
+                marksObtained.InnerText = errorString;
+                midYearEvaluationMarks.InnerText = errorString;
+                finalYearEvaluationMarks.InnerText = errorString;
+
             }
             else
             {
@@ -151,20 +169,34 @@ namespace FYP_Portal.Web
             double scalingMarksForFinal = evaluationFinalMarks / 50;
             double finalEvaluationMarks = scalingMarksForFinal * 30;
 
-            double finalMarks = logBookMarks + reportMarks + finalMidEvaluationMarks + finalEvaluationMarks;
-
+            double finalMarks = logBookMidMarks + logBookFinalMarks + reportMidMarks + reportFinalMarks + finalMidEvaluationMarks + finalEvaluationMarks;
+            double midYearMarks = logBookMidMarks + reportMidMarks + finalMidEvaluationMarks;
+            double finalYearMarks = logBookFinalMarks + reportFinalMarks + finalEvaluationMarks;
             string grade1 = Grades.CalculateGrade(finalMarks);
             double cgpa = Grades.CalculateCGPA(grade1);
 
             grade.InnerText = grade1;
 
             CGPA.InnerText = cgpa.ToString();
+
+            midYearLBM.InnerText = logBookMidMarks.ToString();
+            finalYearLBM.InnerText = logBookFinalMarks.ToString();
+            midYearRM.InnerText = reportMidMarks.ToString();
+            finalYearRM.InnerText = reportFinalMarks.ToString();
+            midYearEM.InnerText = finalMidEvaluationMarks.ToString();
+            finalYearEM.InnerText = finalEvaluationMarks.ToString();
+            midYearEvaluationMarks.InnerText = midYearMarks.ToString();
+            finalYearEvaluationMarks.InnerText = finalYearMarks.ToString();
+            totalMarks.InnerText = "100";
+            marksObtained.InnerText = finalMarks.ToString();
+
         }
 
         private void EvaluationMarks(string marksFor, string errorMessage)
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
+
             DataTable dt = new DataTable();
             da = new SqlDataAdapter("select CLO_Id,ISNULL(AVG(Marks),0) as Marks from EvaluationMarks where MarksFor = @MarksFor and Group_Id = @Group_Id group by CLO_Id", con);
             da.SelectCommand.Parameters.AddWithValue("@Group_Id ", SqlDbType.VarChar).Value = groupID;
@@ -190,13 +222,11 @@ namespace FYP_Portal.Web
                 else
                 {
                     errorString = errorMessage;
-                    isSkipTrue = true;
                 }
             }
             else
             {
                 errorString = errorMessage;
-                isSkipTrue = true;
             }
             con.Close();
 
@@ -206,6 +236,7 @@ namespace FYP_Portal.Web
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
+
             DataTable dt = new DataTable();
             da = new SqlDataAdapter("select CLO_Id,ISNULL(AVG(Marks),0) as Marks from ReportMarks where MarksFor = @MarksFor and Group_Id = @Group_Id group by CLO_Id", con);
             da.SelectCommand.Parameters.AddWithValue("@Group_Id ", SqlDbType.VarChar).Value = groupID;
@@ -218,31 +249,33 @@ namespace FYP_Portal.Web
                 {
                     foreach (DataRow clo in dt.Rows)
                     {
-                        reportMarks += Convert.ToDouble(clo["Marks"]);
+                        if (marksFor == "Mid Year Evaluation")
+                        {
+                            reportMidMarks += Convert.ToDouble(clo["Marks"]);
+                        }
+                        else
+                        {
+                            reportFinalMarks += Convert.ToDouble(clo["Marks"]);
+                        }
                     }
                 }
                 else
                 {
                     errorString = errorMessage;
-                    isSkipTrue = true;
                 }
             }
             else
             {
                 errorString = errorMessage;
-                isSkipTrue = true;
             }
             con.Close();
         }
 
         private void LogBookMarks(string marksFor, string errorMessage)
         {
-            if (isSkipTrue)
-            {
-                return;
-            }
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
+
             DataTable dt = new DataTable();
             da = new SqlDataAdapter("select CLO_Id,ISNULL(AVG(Marks),0) as Marks from LogBookMarks where MarksFor = @MarksFor and Group_Id = @Group_Id group by CLO_Id", con);
             da.SelectCommand.Parameters.AddWithValue("@Group_Id ", SqlDbType.VarChar).Value = groupID;
@@ -255,19 +288,24 @@ namespace FYP_Portal.Web
                 {
                     foreach (DataRow clo in dt.Rows)
                     {
-                        logBookMarks += Convert.ToDouble(clo["Marks"]);
+                        if (marksFor == "Mid Year Evaluation")
+                        {
+                            logBookMidMarks += Convert.ToDouble(clo["Marks"]);
+                        }
+                        else
+                        {
+                            logBookFinalMarks += Convert.ToDouble(clo["Marks"]);
+                        }
                     }
                 }
                 else
                 {
                     errorString = errorMessage;
-                    isSkipTrue = true;
                 }
             }
             else
             {
                 errorString = errorMessage;
-                isSkipTrue = true;
             }
             con.Close();
         }

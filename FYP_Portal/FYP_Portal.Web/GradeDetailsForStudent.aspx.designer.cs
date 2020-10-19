@@ -11,7 +11,7 @@ namespace FYP_Portal.Web
 {
 
 
-	public partial class StudentProfileInfo
+	public partial class GradeDetailsForStudent
 	{
 
 		/// <summary>
@@ -231,94 +231,94 @@ namespace FYP_Portal.Web
 		protected global::System.Web.UI.HtmlControls.HtmlAnchor doc1;
 
 		/// <summary>
-		/// enroll control.
+		/// midYearLBM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell enroll;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearLBM;
 
 		/// <summary>
-		/// regnum control.
+		/// finalYearLBM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell regnum;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearLBM;
 
 		/// <summary>
-		/// stdname control.
+		/// midYearRM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell stdname;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearRM;
 
 		/// <summary>
-		/// fname control.
+		/// finalYearRM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fname;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearRM;
 
 		/// <summary>
-		/// class1 control.
+		/// midYearEM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell class1;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearEM;
 
 		/// <summary>
-		/// inst control.
+		/// finalYearEM control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell inst;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearEM;
 
 		/// <summary>
-		/// mobnum control.
+		/// midYearEvaluationMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell mobnum;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell midYearEvaluationMarks;
 
 		/// <summary>
-		/// pemail control.
+		/// finalYearEvaluationMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell pemail;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell finalYearEvaluationMarks;
 
 		/// <summary>
-		/// supervisorname control.
+		/// totalMarks control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell supervisorname;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell totalMarks;
 
 		/// <summary>
-		/// fyptitle control.
+		/// marksObtained control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlTableCell fyptitle;
+		protected global::System.Web.UI.HtmlControls.HtmlTableCell marksObtained;
 
 		/// <summary>
 		/// grade control.
